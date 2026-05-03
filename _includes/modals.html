@@ -1,20 +1,16 @@
 {% for post in site.posts %}
 <div class="portfolio-modal modal fade" id="portfolioModal{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl"></div>
-        </div>
-      </div>
+  <div class="modal-dialog modal-dialog-centered" style="margin: auto; top: 50%; transform: translateY(-50%);">
+    <div class="modal-content" style="background-color: #16213e; color: #e0e0e0; border-radius: 10px; padding: 20px;">
+      <div class="close-modal" data-dismiss="modal" style="cursor: pointer; text-align: right; font-size: 20px; color: #e0e0e0;">✕</div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>{{ post.category }}</h2>
+            <div class="modal-body" style="text-align: center; padding: 20px;">
+              <h2 style="color: #e0e0e0;">{{ post.category }}</h2>
               <hr class="star-primary">
-              <p>{{ post.description }}</p>
-              <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+              <p style="color: #b0b0b0;">{{ post.description }}</p>
+              <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: #0f3460; color: #e0e0e0; border: none;">닫기</button>
             </div>
           </div>
         </div>
