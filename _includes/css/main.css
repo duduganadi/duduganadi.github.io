@@ -531,3 +531,30 @@ footer {
 a {
   color: #4fc3f7;
 }
+/* 팝업 모달 스타일 */
+.portfolio-modal .modal-content {
+  background-color: #16213e;
+  color: #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.portfolio-modal .modal-body {
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.portfolio-modal h2 {
+  color: #e0e0e0;
+}
+
+.portfolio-modal p {
+  color: #b0b0b0;
+  word-break: keep-all;
+}
+
+.portfolio-modal .btn {
+  background-color: #0f3460;
+  color: #e0e0e0;
+  border: none;
+}
