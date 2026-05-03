@@ -539,9 +539,15 @@ a {
   padding: 20px;
 }
 
+.portfolio-modal .modal-dialog {
+  margin: 10% auto;
+  max-width: 600px;
+}
+
 .portfolio-modal .modal-body {
   overflow-y: auto;
-  max-height: 80vh;
+  max-height: 60vh;
+  padding: 30px;
 }
 
 .portfolio-modal h2 {
