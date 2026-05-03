@@ -7,83 +7,18 @@
       </div>
     </div>
     <div class="row">
-
+      {% for post in site.posts %}
       <div class="col-sm-4 portfolio-item">
-        <div class="portfolio-link">
+        <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
           <div class="caption">
             <div class="caption-content">
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <h4>💻 개발</h4>
-          <p>파이썬 기초 · 백준 알고리즘</p>
-          <p>학교 수업을 통한 파이썬 프로그래밍 기초 습득, 백준 단계별 문제 풀기 4단계까지 완료</p>
-        </div>
+          <h4>{{ post.category }}</h4>
+        </a>
       </div>
-
-      <div class="col-sm-4 portfolio-item">
-        <div class="portfolio-link">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <h4>🚩 CTF / Wargame</h4>
-          <p>드림핵 웹 해킹 기초 문제 풀이 경험</p>
-        </div>
-      </div>
-
-      <div class="col-sm-4 portfolio-item">
-        <div class="portfolio-link">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <h4>🐛 Bug Bounty</h4>
-          <p>네이버 버그바운티 · KISA 준비중</p>
-          <p>드림핵 웹 해킹 커리큘럼 완료 후 실제 서비스 취약점 분석 예정</p>
-        </div>
-      </div>
-
-      <div class="col-sm-4 portfolio-item">
-        <div class="portfolio-link">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <h4>🎓 논문 / 컨퍼런스</h4>
-          <p>CODEGATE · ISEC 참관 예정</p>
-          <p>관심 분야 요약 보고서 작성 및 블로그 업로드 목표</p>
-        </div>
-      </div>
-
-      <div class="col-sm-4 portfolio-item">
-        <div class="portfolio-link">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <h4>🏆 공모전 / 자격증</h4>
-          <p>리눅스마스터 2급 준비중</p>
-          <p>보안 경진대회 및 IT 아이디어 공모전 참여 예정</p>
-        </div>
-      </div>
-
-      <div class="col-sm-4 portfolio-item">
-        <div class="portfolio-link">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <h4>📝 블로그 / 기술문서</h4>
-          <p><a href="https://dudu9.tistory.com/" target="_blank">Tistory 방문하기</a></p>
-        </div>
-      </div>
-
+      {% endfor %}
     </div>
   </div>
 </section>
