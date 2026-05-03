@@ -1,0 +1,9 @@
+---
+layout: default
+modal-id: 4
+date: 2024-01-04
+img: cabin.png
+alt: 논문/컨퍼런스
+category: 논문/컨퍼런스
+description: 코드게이트(CODEGATE)나 국제보안컨퍼런스(ISEC) 등 주요 행사 참관 예정. 관심 분야를 하나 선정하여 요약 보고서 작성 및 블로그 업로드 목표.
+---
