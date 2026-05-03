@@ -1,0 +1,9 @@
+---
+layout: default
+modal-id: 2
+date: 2024-01-02
+img: cabin.png
+alt: CTF
+category: CTF/Wargame
+description: 드림핵 웹 해킹 기초 문제 풀이 경험
+---
