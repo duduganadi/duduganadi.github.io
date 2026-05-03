@@ -482,3 +482,52 @@ footer .footer-below {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
 }
+/* 다크모드 */
+body {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+header {
+  background-color: #16213e !important;
+  color: #e0e0e0;
+}
+
+nav {
+  background-color: #0f3460 !important;
+}
+
+nav a {
+  color: #e0e0e0 !important;
+}
+
+section {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+section.success {
+  background-color: #16213e !important;
+  color: #e0e0e0 !important;
+}
+
+h2, h3, h4, h5 {
+  color: #e0e0e0;
+}
+
+.portfolio-item h4 {
+  color: #e0e0e0;
+}
+
+.portfolio-item p {
+  color: #b0b0b0;
+}
+
+footer {
+  background-color: #0f3460 !important;
+  color: #e0e0e0;
+}
+
+a {
+  color: #4fc3f7;
+}
