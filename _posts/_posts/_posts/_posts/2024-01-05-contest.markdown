@@ -1,0 +1,9 @@
+---
+layout: default
+modal-id: 5
+date: 2024-01-05
+img: cabin.png
+alt: 공모전/자격증
+category: 공모전/자격증
+description: 여름학기 내로 리눅스마스터 2급 취득 예정. 보안 경진대회 및 IT 아이디어 공모전 참여를 통한 실전 경험 확보 목표.
+---
