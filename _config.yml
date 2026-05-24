@@ -1,0 +1,12 @@
+title: 이시현
+description: 보안을 공부하는 학부생
+url: "https://duduganadi.github.io"
+baseurl: ""
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed

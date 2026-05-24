@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }} — 이시현</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/site.css" />
+  <style>
+    .post-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 32px 120px;
+    }
+    .post-back {
+      display: inline-block;
+      margin-bottom: 48px;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      text-decoration: none;
+      color: inherit;
+    }
+    .post-back:hover { opacity: 1; }
+    .post-kicker {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.4;
+      margin-bottom: 16px;
+    }
+    .post-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    .post-meta {
+      font-size: 0.8rem;
+      opacity: 0.4;
+      margin-bottom: 64px;
+      display: flex;
+      gap: 16px;
+    }
+    .post-body {
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+    .post-body h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 56px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .post-body h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 40px 0 12px;
+    }
+    .post-body p { margin-bottom: 24px; }
+    .post-body code {
+      font-family: monospace;
+      font-size: 0.85em;
+      background: rgba(255,255,255,0.06);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    .post-body pre {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      padding: 20px;
+      overflow-x: auto;
+      margin-bottom: 24px;
+    }
+    .post-body pre code {
+      background: none;
+      padding: 0;
+    }
+    .post-body blockquote {
+      border-left: 2px solid rgba(255,255,255,0.2);
+      padding-left: 20px;
+      opacity: 0.7;
+      margin: 0 0 24px;
+    }
+    .post-body ul, .post-body ol {
+      padding-left: 24px;
+      margin-bottom: 24px;
+    }
+    .post-body li { margin-bottom: 8px; }
+    .post-body a { color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.3); }
+    .post-body a:hover { text-decoration-color: currentColor; }
+  </style>
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="shooting-stars" aria-hidden="true">
+    <span class="shoot s1"></span><span class="shoot s2"></span>
+    <span class="shoot s3"></span><span class="shoot s4"></span>
+    <span class="shoot s5"></span>
+  </div>
+
+  <main class="post-wrap">
+    <a href="/" class="post-back">← 홈으로</a>
+    <div class="post-kicker">{{ page.category | default: "blog" }} · {{ page.date | date: "%Y.%m.%d" }}</div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <span>{{ page.date | date: "%Y년 %m월 %d일" }}</span>
+      {% if page.tags %}<span>{{ page.tags | join: " · " }}</span>{% endif %}
+    </div>
+    <div class="post-body">
+      {{ content }}
+    </div>
+  </main>
+
+  <script src="/site.js"></script>
+</body>
+</html>

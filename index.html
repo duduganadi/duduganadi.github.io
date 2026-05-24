@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!doctype html>
 <html lang="ko" data-theme="dark">
 <head>
@@ -55,7 +58,8 @@
       <a href="#experience" data-num="04">Experience</a>
       <a href="#skills" data-num="05">Skills</a>
       <a href="#writing" data-num="06">Writing</a>
-      <a href="#contact" data-num="07">Contact</a>
+      <a href="#blog" data-num="07">블로그</a>
+      <a href="#contact" data-num="08">Contact</a>
     </nav>
 
     <div class="sb-spacer"></div>
@@ -64,7 +68,7 @@
       <div class="kicker">Elsewhere</div>
       <ul>
         <li><span>GitHub</span><a href="#" class="link">@sihyeon</a></li>
-        <li><span>Email</span><a href="/cdn-cgi/l/email-protection#3f534c57110f090e087f58525e5653115c5052" class="link"><span class="__cf_email__" data-cfemail="b3dfc0db9d83858284f3d4ded2dadf9dd0dcde">[email&#160;protected]</span></a></li>
+        <li><span>Email</span><a href="/cdn-cgi/l/email-protection#abc7d8c3859b9d9a9cebccc6cac2c785c8c4c6" class="link"><span class="__cf_email__" data-cfemail="7519061d5b45434442351218141c195b161a18">[email&#160;protected]</span></a></li>
         <li><span>Blog</span><a href="#" class="link">sihyeon.dev</a></li>
         <li><span>X</span><a href="#" class="link">@sh_sec</a></li>
       </ul>
@@ -322,11 +326,31 @@
       </ul>
     </section>
 
-    <!-- CONTACT -->
+    <!-- BLOG -->
+    <section id="blog" class="section reveal">
+      <header class="section-head">
+        <span class="num">07</span>
+        <span class="title">블로그</span>
+        <span class="rule"></span>
+        <a href="#" class="meta link">외부 블로그로 →</a>
+      </header>
+      <div class="blog-grid">
+        {% for post in site.posts limit:6 %}
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span class="d">{{ post.date | date: "%Y.%m.%d" }}</span>
+            <span class="g">{{ post.category | default: "blog" }}</span>
+          </div>
+          <h3 class="blog-title"><a href="{{ post.url }}" class="link">{{ post.title }}</a></h3>
+          <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 80 }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
     <footer id="contact" class="contact reveal">
       <div class="contact-head">Say hi<span class="accent">.</span></div>
       <div class="contact-foot">
-        <a href="/cdn-cgi/l/email-protection#066a756e283630373146616b676f6a2865696b" class="contact-mail link"><span class="__cf_email__" data-cfemail="a2ced1ca8c92949395e2c5cfc3cbce8cc1cdcf">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#3a564952140a0c0b0d7a5d575b535614595557" class="contact-mail link"><span class="__cf_email__" data-cfemail="402c33286e7076717700272d21292c6e232f2d">[email&#160;protected]</span></a>
         <span>Seoul · KST · GMT+9</span>
       </div>
     </footer>
