@@ -42,7 +42,8 @@
   }
 
   /* ───── 2. hero typing animation ───── */
-  const typedEl = document.querySelector(".typed");
+  // Scoped to the index hero only — other pages keep their static title.
+  const typedEl = document.querySelector(".display .typed");
   if (typedEl && !reduceMotion) {
     const words = ["duganadi", "DUGANADI", "@duganadi", "duganadi."];
     // Start by keeping the initial word visible briefly, then begin deleting

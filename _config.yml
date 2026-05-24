@@ -1,12 +1,52 @@
-title: 이시현
-description: 보안을 공부하는 학부생
-url: "https://duduganadi.github.io"
+# ─────────────────────────────────────────────────────────
+# Jekyll site config — duganadi.github.io
+# Works on GitHub Pages without plugins (kramdown + rouge).
+# ─────────────────────────────────────────────────────────
+
+title: "이시현 — duganadi"
+description: "duganadi의 개인 사이트."
+author: "이시현"
+lang: ko
+
+# If this is served at https://<username>.github.io/<repo>/, set baseurl: "/<repo>".
+# For a user/organization root site (https://<username>.github.io/), leave empty.
+url: ""
 baseurl: ""
 
-permalink: /blog/:year/:month/:day/:title/
+# Permalink for blog posts → /posts/<slug>/
+permalink: /posts/:slug/
 
+# Markdown processing
 markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
 
-plugins:
-  - jekyll-feed
+# Excerpt is everything up to the first <!--more--> marker (or first paragraph)
+excerpt_separator: "<!--more-->"
+
+# Don't copy these into _site
+exclude:
+  - README.md
+  - design-explorations.html
+  - design-canvas.jsx
+  - main.jsx
+  - variant-1-editorial.jsx
+  - variant-2-index.jsx
+  - variant-3-minimal.jsx
+  - variant-4-terminal.jsx
+  - styles.css
+  - screenshots
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+# Collections: posts is built-in
+# Defaults — every post gets layout: post automatically.
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

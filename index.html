@@ -1,362 +1,231 @@
 ---
-layout: null
+layout: default
+nav: hero
+title: 이시현
 ---
-<!doctype html>
-<html lang="ko" data-theme="dark">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>이시현 — 보안을 공부하는 학부생</title>
-  <meta name="description" content="이시현의 개인 사이트. 명지대학교 정보통신공학을 전공하며 보안 트랙을 공부합니다." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.cdnfonts.com/css/gandhi-sans" rel="stylesheet" />
-
-  <link rel="stylesheet" href="site.css" />
-</head>
-<body>
-
-  <!-- mouse-follow cursor (hidden on touch via CSS) -->
-  <div class="cursor" aria-hidden="true"></div>
-
-  <!-- shooting stars overlay -->
-  <div class="shooting-stars" aria-hidden="true">
-    <span class="shoot s1"></span>
-    <span class="shoot s2"></span>
-    <span class="shoot s3"></span>
-    <span class="shoot s4"></span>
-    <span class="shoot s5"></span>
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="eyeline">
+    <span>Portfolio / 2026 / 김해</span>
+    <span class="eyeline-right">
+      <span>EST. 2024</span>
+      <span class="rec"><span class="rec-dot"></span>rec</span>
+    </span>
   </div>
 
-  <!-- ───────────────── SIDEBAR ───────────────── -->
-  <aside class="sidebar" aria-label="사이트 정보">
-    <div class="sb-top">
-      <a href="#hero" class="brand">
-        <span>이</span><span class="brand-dot">.</span><span>시현</span>
-      </a>
-      <button class="theme-toggle" type="button" aria-label="라이트 모드로 전환">
-        <span class="theme-icon" aria-hidden="true"></span>
-        <span class="theme-label">DARK</span>
+  <h1 class="display">
+    <span class="display-typed">
+      <span class="typed" aria-live="polite">duganadi</span><span class="caret" aria-hidden="true"></span>
+    </span>
+  </h1>
+
+  <div class="hero-foot">
+    <p>한 단락 소개를 적어보세요.</p>
+    <p class="hero-meta">관심사를 짧게 한 줄로.</p>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="아래로 스크롤">
+    <span>scroll</span>
+    <span class="arrow">↓</span>
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <header class="section-head">
+    <span class="num">02</span>
+    <span class="title">About</span>
+    <span class="rule"></span>
+    <span class="meta">2006 · 김해</span>
+  </header>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>여기에 자기소개 첫 단락을 적어주세요.</p>
+      <p>여기에 자기소개 둘째 단락을 적어주세요.</p>
+    </div>
+    <aside class="about-card">
+      <div class="kicker">Fingerprint</div>
+      <dl>
+        <dt>이름</dt><dd>이시현</dd>
+        <dt>생년월일</dt><dd>2006.04.15</dd>
+        <dt>지역</dt><dd>김해</dd>
+        <dt>학교</dt><dd>명지대 정보통신공학</dd>
+        <dt>학년</dt><dd>2 / 4</dd>
+        <dt>트랙</dt><dd class="accent">security</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section reveal">
+  <header class="section-head">
+    <span class="num">03</span>
+    <span class="title">Projects</span>
+    <span class="rule"></span>
+    <span class="meta">click to expand</span>
+  </header>
+
+  <div class="projects">
+    <article class="project" data-project>
+      <button class="project-bar" type="button">
+        <span class="p-id">P01</span>
+        <span class="p-title">프로젝트 제목</span>
+        <span class="p-tags"></span>
+        <span class="p-year">—</span>
+        <span class="p-toggle" aria-hidden="true">+</span>
       </button>
-    </div>
-
-    <div class="sb-bio">
-      <div class="kicker">Currently</div>
-      <p>명지대학교 정보통신공학 재학 중.<br />보안과 시스템 인프라에 관심이 있어요.</p>
-      <div class="status">
-        <span class="status-dot"></span>
-        <span>지금은 CTF 풀이 중</span>
+      <div class="project-body">
+        <div class="project-body-inner">
+          <div class="ph project-ph">screenshot · drop image</div>
+          <div class="project-copy">
+            <p>프로젝트 설명을 적어주세요.</p>
+            <dl class="project-meta">
+              <dt>stack</dt><dd>—</dd>
+              <dt>status</dt><dd>—</dd>
+            </dl>
+            <div class="project-links">
+              <a href="#" class="link">자세히 보기 →</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </article>
 
-    <nav class="sb-nav" aria-label="섹션">
-      <a href="#hero" data-num="01">Index</a>
-      <a href="#about" data-num="02">About</a>
-      <a href="#projects" data-num="03">Projects</a>
-      <a href="#experience" data-num="04">Experience</a>
-      <a href="#skills" data-num="05">Skills</a>
-      <a href="#writing" data-num="06">Writing</a>
-      <a href="#blog" data-num="07">블로그</a>
-      <a href="#contact" data-num="08">Contact</a>
-    </nav>
+    <article class="project" data-project>
+      <button class="project-bar" type="button">
+        <span class="p-id">P02</span>
+        <span class="p-title">프로젝트 제목</span>
+        <span class="p-tags"></span>
+        <span class="p-year">—</span>
+        <span class="p-toggle" aria-hidden="true">+</span>
+      </button>
+      <div class="project-body">
+        <div class="project-body-inner">
+          <div class="ph project-ph">screenshot · drop image</div>
+          <div class="project-copy">
+            <p>프로젝트 설명을 적어주세요.</p>
+            <dl class="project-meta">
+              <dt>stack</dt><dd>—</dd>
+              <dt>status</dt><dd>—</dd>
+            </dl>
+            <div class="project-links">
+              <a href="#" class="link">자세히 보기 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
 
-    <div class="sb-spacer"></div>
+    <article class="project" data-project>
+      <button class="project-bar" type="button">
+        <span class="p-id">P03</span>
+        <span class="p-title">프로젝트 제목</span>
+        <span class="p-tags"></span>
+        <span class="p-year">—</span>
+        <span class="p-toggle" aria-hidden="true">+</span>
+      </button>
+      <div class="project-body">
+        <div class="project-body-inner">
+          <div class="ph project-ph">screenshot · drop image</div>
+          <div class="project-copy">
+            <p>프로젝트 설명을 적어주세요.</p>
+            <dl class="project-meta">
+              <dt>stack</dt><dd>—</dd>
+              <dt>status</dt><dd>—</dd>
+            </dl>
+            <div class="project-links">
+              <a href="#" class="link">자세히 보기 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
 
-    <div class="sb-social">
-      <div class="kicker">Elsewhere</div>
+<!-- EXPERIENCE -->
+<section id="experience" class="section reveal">
+  <header class="section-head">
+    <span class="num">04</span>
+    <span class="title">Experience</span>
+    <span class="rule"></span>
+  </header>
+  <div class="timeline">
+    <div class="row"><span class="y">—</span><span class="m">—</span><span class="t">경력 / 이력 항목</span><span class="a">→</span></div>
+    <div class="row"><span class="y">—</span><span class="m">—</span><span class="t">경력 / 이력 항목</span><span class="a">→</span></div>
+    <div class="row"><span class="y">—</span><span class="m">—</span><span class="t">경력 / 이력 항목</span><span class="a">→</span></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section reveal">
+  <header class="section-head">
+    <span class="num">05</span>
+    <span class="title">Skills · Tools</span>
+    <span class="rule"></span>
+  </header>
+  <div class="skills">
+    <div class="skill-group">
+      <div class="kicker">Languages</div>
       <ul>
-        <li><span>GitHub</span><a href="#" class="link">@sihyeon</a></li>
-        <li><span>Email</span><a href="/cdn-cgi/l/email-protection#abc7d8c3859b9d9a9cebccc6cac2c785c8c4c6" class="link"><span class="__cf_email__" data-cfemail="7519061d5b45434442351218141c195b161a18">[email&#160;protected]</span></a></li>
-        <li><span>Blog</span><a href="#" class="link">sihyeon.dev</a></li>
-        <li><span>X</span><a href="#" class="link">@sh_sec</a></li>
+        <li>C</li>
+        <li>Python</li>
       </ul>
     </div>
+    <div class="skill-group">
+      <div class="kicker">Security</div>
+      <ul></ul>
+    </div>
+    <div class="skill-group">
+      <div class="kicker">Systems</div>
+      <ul></ul>
+    </div>
+  </div>
+</section>
 
-    <div class="sb-foot">© 2026 · v0.4.1 · Seoul · KST</div>
-  </aside>
-
-  <!-- ───────────────── MAIN ───────────────── -->
-  <main class="main">
-
-    <!-- HERO -->
-    <section id="hero" class="hero">
-      <div class="eyeline">
-        <span>Portfolio / 2026 / Seoul</span>
-        <span class="eyeline-right">
-          <span>EST. 2024</span>
-          <span class="rec"><span class="rec-dot"></span>rec</span>
-        </span>
-      </div>
-
-      <h1 class="display">
-        <span class="display-typed">
-          <span class="typed" aria-live="polite">duganadi</span><span class="caret" aria-hidden="true"></span>
-        </span>
-      </h1>
-
-      <div class="hero-foot">
-        <p>
-          이시현 — 2006년생, 한국.
-          명지대학교에서 <span class="hl">정보통신공학</span>을 전공하며
-          보안 분야로 진로를 잡고 있습니다.
-        </p>
-        <p class="hero-meta">
-          현재 관심사 — 네트워크 프로토콜, 패킷 분석,
-          침투 테스트, OverTheWire 워게임, CTF 리포트 작성.
-        </p>
-      </div>
-
-      <a href="#about" class="scroll-cue" aria-label="아래로 스크롤">
-        <span>scroll</span>
-        <span class="arrow">↓</span>
-      </a>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section reveal">
-      <header class="section-head">
-        <span class="num">02</span>
-        <span class="title">About</span>
-        <span class="rule"></span>
-        <span class="meta">06년생 · 광주 → 서울</span>
-      </header>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            어릴 때부터 <span class="hl">“이게 어떻게 굴러가지?”</span>를
-            참지 못하는 성격이었습니다. 분해해 보다가 망가뜨리고,
-            다시 붙이며 시스템의 틈을 보는 일이 즐거웠어요.
-            지금은 그 호기심을 보안이라는 이름으로 정돈해 가는 중입니다.
-          </p>
-          <p>
-            학교에서는 네트워크와 통신 시스템을, 학교 밖에서는
-            침투 테스트와 포렌식을 공부합니다. CTF는 매주,
-            블로그는 매달, 운동은 매일 게으르게 합니다.
-          </p>
-        </div>
-        <aside class="about-card">
-          <div class="kicker">Fingerprint</div>
-          <dl>
-            <dt>이름</dt><dd>이시현</dd>
-            <dt>생년</dt><dd>2006</dd>
-            <dt>지역</dt><dd>광주 → 서울</dd>
-            <dt>학교</dt><dd>명지대 정보통신공학</dd>
-            <dt>학년</dt><dd>2 / 4</dd>
-            <dt>트랙</dt><dd class="accent">security</dd>
-          </dl>
-        </aside>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section reveal">
-      <header class="section-head">
-        <span class="num">03</span>
-        <span class="title">Projects</span>
-        <span class="rule"></span>
-        <span class="meta">click to expand · 4 entries</span>
-      </header>
-
-      <div class="projects">
-        <article class="project" data-project>
-          <button class="project-bar" type="button">
-            <span class="p-id">P01</span>
-            <span class="p-title">Packet Lens</span>
-            <span class="p-tags">python · wireshark</span>
-            <span class="p-year">2026</span>
-            <span class="p-toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project-body">
-            <div class="project-body-inner">
-              <div class="ph project-ph">screenshot · 16:9 — drop image</div>
-              <div class="project-copy">
-                <p>PCAP 파일을 받아 의심스러운 트래픽 패턴을 시각화하는 작은 CLI. 의미 없는 노이즈를 걷어내고 흐름을 보여주는 데 집중했습니다.</p>
-                <dl class="project-meta">
-                  <dt>stack</dt><dd>Python 3.12 · Scapy · Rich · Pandas</dd>
-                  <dt>status</dt><dd>beta · 자가 학습용으로 다듬는 중</dd>
-                  <dt>role</dt><dd>혼자 만듦 · 2026.02 — 진행중</dd>
-                </dl>
-                <div class="project-links">
-                  <a href="#" class="link">case study →</a>
-                  <a href="#" class="link">github →</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="project" data-project>
-          <button class="project-bar" type="button">
-            <span class="p-id">P02</span>
-            <span class="p-title">CTF Notebook</span>
-            <span class="p-tags">markdown · gh actions</span>
-            <span class="p-year">2025</span>
-            <span class="p-toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project-body">
-            <div class="project-body-inner">
-              <div class="ph project-ph">cover · drop image</div>
-              <div class="project-copy">
-                <p>주간 CTF 풀이를 자동으로 정적 사이트로 빌드해 주는 작은 SSG. 풀이를 남기지 않으면 다음 주에 까먹는다는 걸 알았어요.</p>
-                <dl class="project-meta">
-                  <dt>stack</dt><dd>Node · Markdown · GitHub Actions</dd>
-                  <dt>status</dt><dd>stable · 매주 빌드 중</dd>
-                </dl>
-                <div class="project-links">
-                  <a href="#" class="link">case study →</a>
-                  <a href="#" class="link">github →</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="project" data-project>
-          <button class="project-bar" type="button">
-            <span class="p-id">P03</span>
-            <span class="p-title">Port Knock</span>
-            <span class="p-tags">c · linux · sockets</span>
-            <span class="p-year">2025</span>
-            <span class="p-toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project-body">
-            <div class="project-body-inner">
-              <div class="ph project-ph">cover · drop image</div>
-              <div class="project-copy">
-                <p>포트 노킹 데몬을 직접 구현하며 소켓 프로그래밍의 감각을 익힌 학습용 프로젝트. 정답은 짧고, 가는 길은 길었습니다.</p>
-                <dl class="project-meta">
-                  <dt>stack</dt><dd>C · Linux raw sockets</dd>
-                  <dt>status</dt><dd>archived · 결과보다 과정</dd>
-                </dl>
-                <div class="project-links">
-                  <a href="#" class="link">read notes →</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="project" data-project>
-          <button class="project-bar" type="button">
-            <span class="p-id">P04</span>
-            <span class="p-title">OverTheWire log</span>
-            <span class="p-tags">journal</span>
-            <span class="p-year">2024 —</span>
-            <span class="p-toggle" aria-hidden="true">+</span>
-          </button>
-          <div class="project-body">
-            <div class="project-body-inner">
-              <div class="ph project-ph">cover · drop image</div>
-              <div class="project-copy">
-                <p>Bandit·Natas 진행 상황을 매일 단정한 줄글로 남기는 학습 기록. 잊지 않으려고 시작한 글이 어느새 가장 자주 들여다보는 페이지가 되었어요.</p>
-                <dl class="project-meta">
-                  <dt>stack</dt><dd>Markdown · 매일 한 편</dd>
-                  <dt>status</dt><dd>live · Bandit 0→20 / Natas 0→14</dd>
-                </dl>
-                <div class="project-links">
-                  <a href="#" class="link">read journal →</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section reveal">
-      <header class="section-head">
-        <span class="num">04</span>
-        <span class="title">Experience</span>
-        <span class="rule"></span>
-      </header>
-      <div class="timeline">
-        <div class="row"><span class="y">2026</span><span class="m">지금</span><span class="t">보안 동아리 · 주니어 운영진</span><span class="a">→</span></div>
-        <div class="row"><span class="y">2025</span><span class="m">—</span><span class="t">교내 정보보안 스터디 운영</span><span class="a">→</span></div>
-        <div class="row"><span class="y">2025</span><span class="m">여름</span><span class="t">첫 CTF 대회 출전 · TeamMju</span><span class="a">→</span></div>
-        <div class="row"><span class="y">2024</span><span class="m">3월</span><span class="t">명지대학교 정보통신공학 입학</span><span class="a">→</span></div>
-        <div class="row"><span class="y">2024</span><span class="m">겨울</span><span class="t">리눅스 · 네트워크 자가학습 시작</span><span class="a">→</span></div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section reveal">
-      <header class="section-head">
-        <span class="num">05</span>
-        <span class="title">Skills · Tools</span>
-        <span class="rule"></span>
-      </header>
-      <div class="skills">
-        <div class="skill-group">
-          <div class="kicker">Languages</div>
-          <ul>
-            <li>C</li><li>Python</li><li>JavaScript</li><li>Bash</li><li>SQL</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <div class="kicker">Security</div>
-          <ul>
-            <li>Wireshark</li><li>Nmap</li><li>Burp Suite</li><li>Ghidra</li><li>OverTheWire</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <div class="kicker">Systems</div>
-          <ul>
-            <li>Linux</li><li>Docker</li><li>Git</li><li>Vim</li><li>tmux</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- WRITING -->
-    <section id="writing" class="section reveal">
-      <header class="section-head">
-        <span class="num">06</span>
-        <span class="title">Writing</span>
-        <span class="rule"></span>
-        <a href="#" class="meta link">→ /blog</a>
-      </header>
-      <ul class="posts">
-        <li><a href="#"><span class="d">2026.05</span><span class="t link">Bandit 0→20을 일주일에 끝낸 회고</span><span class="g">shell · journal</span></a></li>
-        <li><a href="#"><span class="d">2026.04</span><span class="t link">처음으로 패킷을 직접 잡아 본 날</span><span class="g">network</span></a></li>
-        <li><a href="#"><span class="d">2026.03</span><span class="t link">내가 보는 보안 공부 로드맵</span><span class="g">study</span></a></li>
-        <li><a href="#"><span class="d">2026.02</span><span class="t link">리눅스 권한이라는 미로의 입구에서</span><span class="g">linux</span></a></li>
-      </ul>
-    </section>
-
-    <!-- BLOG -->
-    <section id="blog" class="section reveal">
-      <header class="section-head">
-        <span class="num">07</span>
-        <span class="title">블로그</span>
-        <span class="rule"></span>
-        <a href="#" class="meta link">외부 블로그로 →</a>
-      </header>
-      <div class="blog-grid">
-        {% for post in site.posts limit:6 %}
-        <article class="blog-card">
+<!-- BLOG preview — Jekyll pulls latest 3 posts automatically -->
+<section id="blog" class="section reveal">
+  <header class="section-head">
+    <span class="num">06</span>
+    <span class="title">블로그</span>
+    <span class="rule"></span>
+    <a href="{{ '/blog.html' | relative_url }}" class="meta link">전체 글 보기 →</a>
+  </header>
+  <div class="blog-grid">
+    {%- assign latest = site.posts | slice: 0, 3 -%}
+    {%- if latest.size > 0 -%}
+      {%- for post in latest -%}
+        <a class="blog-card" href="{{ post.url | relative_url }}">
+          <div class="ph blog-ph">cover · drop image</div>
           <div class="blog-meta">
             <span class="d">{{ post.date | date: "%Y.%m.%d" }}</span>
-            <span class="g">{{ post.category | default: "blog" }}</span>
+            <span class="g">{{ post.category | default: 'post' }}</span>
           </div>
-          <h3 class="blog-title"><a href="{{ post.url }}" class="link">{{ post.title }}</a></h3>
-          <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 80 }}</p>
-        </article>
-        {% endfor %}
-      </div>
-    </section>
-    <footer id="contact" class="contact reveal">
-      <div class="contact-head">Say hi<span class="accent">.</span></div>
-      <div class="contact-foot">
-        <a href="/cdn-cgi/l/email-protection#3a564952140a0c0b0d7a5d575b535614595557" class="contact-mail link"><span class="__cf_email__" data-cfemail="402c33286e7076717700272d21292c6e232f2d">[email&#160;protected]</span></a>
-        <span>Seoul · KST · GMT+9</span>
-      </div>
-    </footer>
+          <h3 class="blog-title link">{{ post.title }}</h3>
+          <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 110 }}</p>
+        </a>
+      {%- endfor -%}
+    {%- else -%}
+      <a class="blog-card" href="{{ '/blog.html' | relative_url }}">
+        <div class="ph blog-ph">cover · drop image</div>
+        <div class="blog-meta">
+          <span class="d">YYYY.MM.DD</span>
+          <span class="g">tag</span>
+        </div>
+        <h3 class="blog-title link">아직 글이 없습니다</h3>
+        <p class="blog-excerpt">_posts 폴더에 마크다운 파일을 추가하면 여기에 표시됩니다.</p>
+      </a>
+    {%- endif -%}
+  </div>
+</section>
 
-  </main>
-
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="site.js"></script>
-</body>
-</html>
+<!-- CONTACT -->
+<footer id="contact" class="contact reveal">
+  <div class="contact-head">Say hi<span class="accent">.</span></div>
+  <div class="contact-foot">
+    <a href="mailto:lalala433@naver.com" class="contact-mail link">lalala433@naver.com</a>
+    <span>김해 · KST · GMT+9</span>
+  </div>
+</footer>

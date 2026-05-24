@@ -1,0 +1,84 @@
+---
+layout: default
+nav: blog
+title: 블로그
+permalink: /blog.html
+---
+
+<!-- HEADER -->
+<section class="blog-hero">
+  <div class="eyeline">
+    <span><a href="{{ '/' | relative_url }}" class="link">← 홈으로</a></span>
+    <span class="eyeline-right">
+      <span>BLOG</span>
+      <span class="rec"><span class="rec-dot"></span>writing</span>
+    </span>
+  </div>
+  <h1 class="blog-hero-title">
+    <span class="display-typed">
+      <span class="typed">블로그</span><span class="caret" aria-hidden="true"></span>
+    </span>
+  </h1>
+  <p class="blog-hero-sub">
+    블로그 소개를 한두 줄 적어보세요.
+  </p>
+</section>
+
+{%- comment -%}
+  Collect all categories so the filter chips reflect what's actually published.
+  Sorted alphabetically; "All" stays first.
+{%- endcomment -%}
+{%- assign all_cats = "" | split: "" -%}
+{%- for p in site.posts -%}
+  {%- if p.category -%}
+    {%- assign all_cats = all_cats | push: p.category -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign cats = all_cats | uniq | sort -%}
+
+<!-- FILTERS — chips are decorative until you wire them up in JS -->
+<section class="blog-filter">
+  <div class="filter-row">
+    <div class="filter-label kicker">Filter</div>
+    <div class="filter-chips">
+      <button type="button" class="chip is-active" data-cat="all">All</button>
+      {%- for c in cats -%}
+        <button type="button" class="chip" data-cat="{{ c }}">{{ c }}</button>
+      {%- endfor -%}
+    </div>
+    <div class="filter-meta">{{ site.posts.size }} post{% if site.posts.size != 1 %}s{% endif %}</div>
+  </div>
+</section>
+
+<!-- POSTS LIST — auto-generated from _posts -->
+<section class="blog-list">
+  {%- if site.posts.size == 0 -%}
+    <div class="post-row" style="text-align:center; padding:60px 0; color:var(--muted-2)">
+      <p style="margin:0 0 8px">아직 글이 없습니다.</p>
+      <p style="margin:0; font-size:12.5px">
+        <code style="background:var(--bg-2); border:1px solid var(--line); padding:2px 8px; border-radius:3px">_posts/</code>
+        폴더에 <code style="background:var(--bg-2); border:1px solid var(--line); padding:2px 8px; border-radius:3px">YYYY-MM-DD-제목.md</code>
+        파일을 추가하면 여기에 자동으로 표시됩니다.
+      </p>
+    </div>
+  {%- else -%}
+    {%- for post in site.posts -%}
+      {%- assign words = post.content | strip_html | number_of_words -%}
+      {%- assign reading = words | divided_by: 350 | plus: 1 -%}
+      <a class="post-row" href="{{ post.url | relative_url }}" data-cat="{{ post.category | default: 'post' }}">
+        <div class="post-row-grid">
+          <span class="d">{{ post.date | date: "%Y.%m.%d" }}</span>
+          <span class="g">{{ post.category | default: 'post' }}</span>
+          <h2 class="t">{{ post.title }}</h2>
+          <span class="r">{{ reading }} min</span>
+        </div>
+        <p class="x">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      </a>
+    {%- endfor -%}
+  {%- endif -%}
+</section>
+
+<footer class="blog-foot">
+  <div>RSS 피드 곧 추가 예정.</div>
+  <a href="{{ '/' | relative_url }}" class="link">← duganadi 홈으로</a>
+</footer>
