@@ -1,6 +1,6 @@
 <!-- Shared sidebar.
      Pass `page.nav` from each page to highlight the current item — values:
-     "hero" "about" "projects" "experience" "skills" "blog" "contact". -->
+     "hero" "about" "projects" "skills" "blog" "contact". -->
 <aside class="sidebar" aria-label="사이트 정보">
   <div class="sb-top">
     <a href="{{ '/' | relative_url }}" class="brand">
@@ -11,25 +11,20 @@
       <span class="theme-label">DARK</span>
     </button>
   </div>
-
   <div class="sb-bio">
     <div class="kicker">Currently</div>
-    <p>한 줄 소개를 적어보세요.</p>
+    <p>보안을 공부하는 대학생 입니다.</p>
   </div>
-
   <nav class="sb-nav" aria-label="섹션">
     {%- assign cur = page.nav | default: "" -%}
-    <a href="{{ '/#hero'        | relative_url }}" data-num="01"{% if cur == 'hero'        %} class="is-current"{% endif %}>Index</a>
-    <a href="{{ '/#about'       | relative_url }}" data-num="02"{% if cur == 'about'       %} class="is-current"{% endif %}>About</a>
-    <a href="{{ '/#projects'    | relative_url }}" data-num="03"{% if cur == 'projects'    %} class="is-current"{% endif %}>Projects</a>
-    <a href="{{ '/#experience'  | relative_url }}" data-num="04"{% if cur == 'experience'  %} class="is-current"{% endif %}>Experience</a>
-    <a href="{{ '/#skills'      | relative_url }}" data-num="05"{% if cur == 'skills'      %} class="is-current"{% endif %}>Skills</a>
-    <a href="{{ '/blog.html'    | relative_url }}" data-num="06"{% if cur == 'blog'        %} class="is-current"{% endif %}>블로그</a>
-    <a href="{{ '/#contact'     | relative_url }}" data-num="07"{% if cur == 'contact'     %} class="is-current"{% endif %}>Contact</a>
+    <a href="{{ '/#hero'     | relative_url }}" data-num="01"{% if cur == 'hero'     %} class="is-current"{% endif %}>Index</a>
+    <a href="{{ '/#about'    | relative_url }}" data-num="02"{% if cur == 'about'    %} class="is-current"{% endif %}>About</a>
+    <a href="{{ '/#projects' | relative_url }}" data-num="03"{% if cur == 'projects' %} class="is-current"{% endif %}>Projects</a>
+    <a href="{{ '/#skills'   | relative_url }}" data-num="04"{% if cur == 'skills'   %} class="is-current"{% endif %}>Skills</a>
+    <a href="{{ '/blog.html' | relative_url }}" data-num="05"{% if cur == 'blog'     %} class="is-current"{% endif %}>블로그</a>
+    <a href="{{ '/#contact'  | relative_url }}" data-num="06"{% if cur == 'contact'  %} class="is-current"{% endif %}>Contact</a>
   </nav>
-
   <div class="sb-spacer"></div>
-
   <div class="sb-social">
     <div class="kicker">Elsewhere</div>
     <ul>
@@ -39,6 +34,5 @@
       <li><span>Blog</span><a href="{{ '/blog.html' | relative_url }}" class="link">duganadi.dev</a></li>
     </ul>
   </div>
-
   <div class="sb-foot">© 2026 · 김해 · KST</div>
 </aside>
