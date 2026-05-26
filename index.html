@@ -13,18 +13,15 @@ title: 이시현
       <span class="rec"><span class="rec-dot"></span>rec</span>
     </span>
   </div>
-
   <h1 class="display">
     <span class="display-typed">
       <span class="typed" aria-live="polite">duganadi</span><span class="caret" aria-hidden="true"></span>
     </span>
   </h1>
-
   <div class="hero-foot">
-    <p>한 단락 소개를 적어보세요.</p>
-    <p class="hero-meta">관심사를 짧게 한 줄로.</p>
+    <p>보안을 공부하는 대학생 입니다.</p>
+    <p class="hero-meta">현재 web 해킹을 위주로 공부하고 있습니다</p>
   </div>
-
   <a href="#about" class="scroll-cue" aria-label="아래로 스크롤">
     <span>scroll</span>
     <span class="arrow">↓</span>
@@ -41,8 +38,7 @@ title: 이시현
   </header>
   <div class="about-grid">
     <div class="about-text">
-      <p>여기에 자기소개 첫 단락을 적어주세요.</p>
-      <p>여기에 자기소개 둘째 단락을 적어주세요.</p>
+      <p>이제 막 보안 공부를 시작하여서 많이 부족하지만 mjsec 동아리와 nights frontier 활동을 위주로 경험을 쌓아가고 있습니다.</p>
     </div>
     <aside class="about-card">
       <div class="kicker">Fingerprint</div>
@@ -66,7 +62,6 @@ title: 이시현
     <span class="rule"></span>
     <span class="meta">click to expand</span>
   </header>
-
   <div class="projects">
     <article class="project" data-project>
       <button class="project-bar" type="button">
@@ -92,7 +87,6 @@ title: 이시현
         </div>
       </div>
     </article>
-
     <article class="project" data-project>
       <button class="project-bar" type="button">
         <span class="p-id">P02</span>
@@ -117,7 +111,6 @@ title: 이시현
         </div>
       </div>
     </article>
-
     <article class="project" data-project>
       <button class="project-bar" type="button">
         <span class="p-id">P03</span>
@@ -145,24 +138,10 @@ title: 이시현
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="section reveal">
-  <header class="section-head">
-    <span class="num">04</span>
-    <span class="title">Experience</span>
-    <span class="rule"></span>
-  </header>
-  <div class="timeline">
-    <div class="row"><span class="y">—</span><span class="m">—</span><span class="t">경력 / 이력 항목</span><span class="a">→</span></div>
-    <div class="row"><span class="y">—</span><span class="m">—</span><span class="t">경력 / 이력 항목</span><span class="a">→</span></div>
-    <div class="row"><span class="y">—</span><span class="m">—</span><span class="t">경력 / 이력 항목</span><span class="a">→</span></div>
-  </div>
-</section>
-
 <!-- SKILLS -->
 <section id="skills" class="section reveal">
   <header class="section-head">
-    <span class="num">05</span>
+    <span class="num">04</span>
     <span class="title">Skills · Tools</span>
     <span class="rule"></span>
   </header>
@@ -188,7 +167,7 @@ title: 이시현
 <!-- BLOG preview — Jekyll pulls latest 3 posts automatically -->
 <section id="blog" class="section reveal">
   <header class="section-head">
-    <span class="num">06</span>
+    <span class="num">05</span>
     <span class="title">블로그</span>
     <span class="rule"></span>
     <a href="{{ '/blog.html' | relative_url }}" class="meta link">전체 글 보기 →</a>
@@ -197,15 +176,15 @@ title: 이시현
     {%- assign latest = site.posts | slice: 0, 3 -%}
     {%- if latest.size > 0 -%}
       {%- for post in latest -%}
-        <a class="blog-card" href="{{ post.url | relative_url }}">
-          <div class="ph blog-ph">cover · drop image</div>
-          <div class="blog-meta">
-            <span class="d">{{ post.date | date: "%Y.%m.%d" }}</span>
-            <span class="g">{{ post.category | default: 'post' }}</span>
-          </div>
-          <h3 class="blog-title link">{{ post.title }}</h3>
-          <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 110 }}</p>
-        </a>
+      <a class="blog-card" href="{{ post.url | relative_url }}">
+        <div class="ph blog-ph">cover · drop image</div>
+        <div class="blog-meta">
+          <span class="d">{{ post.date | date: "%Y.%m.%d" }}</span>
+          <span class="g">{{ post.category | default: 'post' }}</span>
+        </div>
+        <h3 class="blog-title link">{{ post.title }}</h3>
+        <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 110 }}</p>
+      </a>
       {%- endfor -%}
     {%- else -%}
       <a class="blog-card" href="{{ '/blog.html' | relative_url }}">
