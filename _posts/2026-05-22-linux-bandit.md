@@ -270,7 +270,7 @@ cd /tmp/tmp.abcdef/           # 폴더로 이동
 xxd -r data.txt > data        # hexdump를 원래 바이너리 파일로 되돌리기
 file data                     # 파일 종류 확인 후 해당 압축 해제 명령어 반복
 ```
-
+<img width="1198" height="685" alt="Image" src="https://github.com/user-attachments/assets/7c42918b-f8f8-46bb-bddd-6210c10ba7a2" />
 이런 식으로 반복해서 압축을 풀어 `cat`으로 비밀번호를 알아낸다.
 
 ---
@@ -290,7 +290,8 @@ file data                     # 파일 종류 확인 후 해당 압축 해제 �
 **풀이**
 
 ```bash
-ls                                                                   # sshkey.private 파일이 있는 것을 확인
+ls
+<img width="354" height="128" alt="Image" src="https://github.com/user-attachments/assets/7680ade3-c7d1-4623-8885-81c98456b5da" />                                                                 # sshkey.private 파일이 있는 것을 확인
 cat sshkey.private                                                   # 키 파일 내용 복사
 exit                                                                 # 서버에서 나오기
 nano sshkey.private                                                  # 내 Ubuntu에서 키 파일 만들기 (복사한 내용 붙여넣기)
