@@ -904,17 +904,19 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 .post-body th,
 .post-body td {
-  border: 1px solid #333;
+  border: 1px solid var(--color-border, #555);
   padding: 0.6rem 1rem;
   text-align: center;
+  word-break: keep-all;
+  color: var(--color-text, inherit);
 }
 
 .post-body th {
-  background: #111;
-  color: #e0e0e0;
+  background: var(--color-surface, #111);
   font-weight: 600;
 }
 
 .post-body tr:nth-child(even) td {
-  background: #0a0a0a;
+  background: var(--color-surface-alt, rgba(0,0,0,0.05));
+}
 }
