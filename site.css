@@ -893,3 +893,28 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .post-nav.next { text-align: left; }
   .post { padding: 32px 24px 56px; }
 }
+
+/* ── 표 스타일 ── */
+.post-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.post-body th,
+.post-body td {
+  border: 1px solid #333;
+  padding: 0.6rem 1rem;
+  text-align: center;
+}
+
+.post-body th {
+  background: #111;
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+.post-body tr:nth-child(even) td {
+  background: #0a0a0a;
+}
