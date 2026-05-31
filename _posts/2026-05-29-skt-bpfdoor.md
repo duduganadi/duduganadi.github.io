@@ -98,15 +98,43 @@ struct sock_filter filter[] = {
 strcpy(argv[0], "/usr/bin/dbus-daemon");
 // 실제로는 악성코드인데 ps 결과엔 정상 시스템 프로세스처럼 보임
 ```
-###기존 도구가 잡지 못한 이유###
-
-| 탐지 시도 | 왜 실패하는가 | 대안 |
-|:----:|:----:|:----:|
-| netstat -anp | 열린 포트 없음 — AF_PACKET은 포트 개념 자체가 없음 | ss -a + type:raw 필터 |
-| ps aux | dbus-daemon 등으로 프로세스명 위장 | /proc/PID/exe 실제 바이너리 경로 비교 |
-| 방화벽 로그 | 패킷이 방화벽 레이어에 도달하기 전에 BPF가 가로챔 | tcpdump로 NIC 레벨 원시 패킷 직접 캡처 |
-| 바이러스 백신 | 파일 시그니처 없음 — 메모리에서만 실행되기도 함 | 메모리 포렌식 (Volatility 등) |
-| 네트워크 IDS | 평소엔 트래픽 자체가 없음 | **행위 기반 탐지** — AF_PACKET 소켓 생성 이벤트 감시 |
+**기존 도구가 잡지 못한 이유**
+<table>
+  <thead>
+    <tr>
+      <th>탐지 시도</th>
+      <th>왜 실패하는가</th>
+      <th>대안</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>netstat -anp</td>
+      <td>열린 포트 없음 — AF_PACKET은 포트 개념 자체가 없음</td>
+      <td>ss -a + type:raw 필터</td>
+    </tr>
+    <tr>
+      <td>ps aux</td>
+      <td>dbus-daemon 등으로 프로세스명 위장</td>
+      <td>/proc/PID/exe 실제 바이너리 경로 비교</td>
+    </tr>
+    <tr>
+      <td>방화벽 로그</td>
+      <td>패킷이 방화벽 레이어에 도달하기 전에 BPF가 가로챔</td>
+      <td>tcpdump로 NIC 레벨 원시 패킷 직접 캡처</td>
+    </tr>
+    <tr>
+      <td>바이러스 백신</td>
+      <td>파일 시그니처 없음 — 메모리에서만 실행되기도 함</td>
+      <td>메모리 포렌식 (Volatility 등)</td>
+    </tr>
+    <tr>
+      <td>네트워크 IDS</td>
+      <td>평소엔 트래픽 자체가 없음</td>
+      <td><strong>행위 기반 탐지</strong> — AF_PACKET 소켓 생성 이벤트 감시</td>
+    </tr>
+  </tbody>
+</table>
 ---
 
 ## 해킹 원리 분석
